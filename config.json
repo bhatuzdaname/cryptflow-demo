@@ -1,0 +1,6 @@
+{
+  "model_name": "model.pb",
+  "input_tensors": { "Placeholder" : "1,224,224,3"},
+  "target": "SCI",
+  "output_tensors": [ "fc/fc"]
+}
