@@ -1,8 +1,11 @@
 # cryptflow-demo
 
-#### Step 1. Load environment
+#### Step 0. Requirements
+Setup [ezpc repo](https://github.com/mpc-msri/EzPC) by following instructions from [here](https://github.com/mpc-msri/EzPC/tree/master/Athos).
+*Load environment*
 ```
 source path/to/EzPC/mpc_venv/bin/activate
+pip install mscviplib Pillow
 ```
 
 #### Step 2. Compile graph.
