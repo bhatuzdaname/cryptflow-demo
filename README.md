@@ -2,7 +2,7 @@
 
 #### Step 0. Requirements
 Setup [ezpc repo](https://github.com/mpc-msri/EzPC) by following instructions from [here](https://github.com/mpc-msri/EzPC/tree/master/Athos).
-*Load environment*
+Load the environment and install additional required packages:
 ```
 source path/to/EzPC/mpc_venv/bin/activate
 pip install mscviplib Pillow
