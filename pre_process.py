@@ -45,12 +45,16 @@ def resize_image(image):
     cropped_image = np.moveaxis(cropped_image, 0, -1)
     return cropped_image
 
-if __name__ == "__main__":
-  image_name = sys.argv[1]
+def pre_process(image_name, output_name):
   image = Image.open(image_name)
   print("Resize starting")
   np_img = resize_image(image)
-  np.save("xray" , np_img)
-  print("Resizing done. Image dumped in xray.npy")
+  np.save(output_name , np_img)
+  print("Resizing done. Image dumped in {}.npy".format(output_name))
   #PIL_image = Image.fromarray(np_img.astype('uint8'), 'RGB')
   #PIL_image.save("resized.jpg")
+
+if __name__ == "__main__":
+  image_name = sys.argv[1]
+  output_name = "xray"
+  pre_process(image_name, output_name)
