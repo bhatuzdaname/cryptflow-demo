@@ -34,11 +34,11 @@ Client on another machine:
 ```
 ./model_SCI_OT.out r=2 ip=123.231.231.123 p=12345 < xray_fixedpt_scale_12.inp > output.txt
 ```
-You can change ip to 127.0.0.1 if both run on the same machine. (Will take around ~mins to run with a peak memory usage of )
+You can change ip to 127.0.0.1 if both run on the same machine. (Will take around ~30 mins to run with a peak memory usage of ~8GB)
 
 #### Step 7. Extract output as numpy array
 ```
-python path/to/EzPC/CompilerScripts/get_output.py output.txt config.json
+python path/to/EzPC/Athos/CompilerScripts/get_output.py output.txt config.json
 ```
 Dumps ```model_output.npy``` as a flattened numpy array(1-D).
 
@@ -49,6 +49,11 @@ python run_tf.py xray.npy
 ```
 Dumps output in ```tensorflow_output.npy```. Compare with output generated in 2PC computation:
 ```
-python path/to/EzPC/CompilerScripts/comparison_scripts/compare_np_arrs.py tensorflow_output.npy model_output.npy
+python path/to/EzPC/Athos/CompilerScripts/comparison_scripts/compare_np_arrs.py tensorflow_output.npy model_output.npy
+```
+We get output as 
+
+```
+Arrays matched upto 1 decimal points
 ```
 
